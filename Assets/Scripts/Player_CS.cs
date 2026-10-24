@@ -30,13 +30,12 @@ public class Player_CS : MonoBehaviour
     private float BuiltSpeed = 0.0f;
     [SerializeField] private float BuiltSpeedThreshold = 20.0f;
 
-
-
     private float AirTime = 0.0f;
 
     [Header("Collision")]
     [SerializeField] private LayerMask FloorLayers;
-    private float SizeGain = 10.0f;
+    [SerializeField] private float SizeGain = 0.4f;
+    [SerializeField] private float MassGain = 2.0f;
 
 
     private void Awake()
@@ -61,7 +60,7 @@ public class Player_CS : MonoBehaviour
         {
             if (BuiltSpeed > BuiltSpeedThreshold)
             {
-                PlayerBody.AddForce(PlayerTransform.forward * BuiltSpeed);
+                PlayerBody.AddForce(PlayerTransform.forward * BuiltSpeed * PlayerBody.mass);
             }
             
             BuiltSpeed = 0.0f;
@@ -87,7 +86,7 @@ public class Player_CS : MonoBehaviour
         }
     }
 
-
+    // Height Death : 
     private void OnCollisionEnter(Collision collision)
     {
         // Landing : 
@@ -99,6 +98,13 @@ public class Player_CS : MonoBehaviour
             }
             AirTime = 0.0f;
         }
+    }
+
+    public void Grow(float ObjectValue)
+    {
+        Vector3 GrowValue = new Vector3(SizeGain * ObjectValue, SizeGain* ObjectValue, SizeGain* ObjectValue);
+        PlayerTransform.localScale = PlayerTransform.localScale + GrowValue;
+        PlayerBody.mass = PlayerBody.mass + (MassGain * ObjectValue);
     }
 
 }
