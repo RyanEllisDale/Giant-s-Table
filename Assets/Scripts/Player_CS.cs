@@ -108,7 +108,7 @@ public class Player_CS : MonoBehaviour
             float goodVelocity = 1.8f;
             float PlayerVelocity = PlayerBody.velocity.x + PlayerBody.velocity.y + PlayerBody.velocity.z;
 
-            if (PlayerVelocity < goodVelocity)
+            if (PlayerVelocity > 0.3f && PlayerVelocity < goodVelocity)
             {
                 StartCoroutine(UIBubble(UIBubblesNegative[UnityEngine.Random.Range(0, 3)]));
             }
