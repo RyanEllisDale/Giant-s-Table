@@ -44,6 +44,9 @@ public class Player_CS : MonoBehaviour
     [SerializeField] private List<GameObject> UIBubblesPositive;
     [SerializeField] private List<GameObject> UIBubblesNegative;
 
+    [Header("Sounds")]
+    [SerializeField] private AudioSource PositiveHit;
+    [SerializeField] private AudioSource NegativeHit;
 
     private void Awake()
     {
@@ -114,10 +117,12 @@ public class Player_CS : MonoBehaviour
 
             if (PlayerVelocity > 0.3f && PlayerVelocity < goodVelocity)
             {
+                NegativeHit.Play();
                 StartCoroutine(UIBubble(UIBubblesNegative[UnityEngine.Random.Range(0, 3)]));
             }
             else if (PlayerVelocity > goodVelocity)
             {
+                PositiveHit.Play();
                 StartCoroutine(UIBubble(UIBubblesPositive[UnityEngine.Random.Range(0, 3)]));
             }
         }

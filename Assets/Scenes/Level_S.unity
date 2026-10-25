@@ -216,7 +216,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 16233410}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.1
   Mass: 2
 --- !u!54 &16233410
@@ -973,6 +973,7 @@ GameObject:
   - component: {fileID: 78865680}
   - component: {fileID: 78865682}
   - component: {fileID: 78865681}
+  - component: {fileID: 78865683}
   m_Layer: 0
   m_Name: Main Camera (1)
   m_TagString: MainCamera
@@ -1054,6 +1055,102 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!82 &78865683
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78865679}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3bbaf345cb25c4741862198ac4649c5e, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &82277983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1382,7 +1479,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 105362965}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.2
   Mass: 3
 --- !u!54 &105362965
@@ -1848,7 +1945,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 143177876}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.6
   Mass: 3
 --- !u!54 &143177876
@@ -2939,7 +3036,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 214952630}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.2
   Mass: 0.001
 --- !u!54 &214952630
@@ -3568,7 +3665,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 295220390}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.2
   Mass: 0.2
 --- !u!54 &295220390
@@ -6761,7 +6858,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 671618062}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.1
   Mass: 0.1
 --- !u!54 &671618062
@@ -8406,7 +8503,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 790047952}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 2.4
   Mass: 7
 --- !u!54 &790047952
@@ -10129,7 +10226,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 912691050}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.6
   Mass: 2
 --- !u!54 &912691050
@@ -10970,7 +11067,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 970556949}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.8
   Mass: 3
 --- !u!54 &970556949
@@ -11036,7 +11133,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 970556949}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 1
   Mass: 1
 --- !u!65 &970556954
@@ -11734,7 +11831,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 1049186668}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.4
   Mass: 0.1
 --- !u!54 &1049186668
@@ -11883,7 +11980,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 1055862341}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.7
   Mass: 1.9
 --- !u!54 &1055862341
@@ -12188,7 +12285,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 1074157911}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.4
   Mass: 0.8
 --- !u!54 &1074157911
@@ -12788,7 +12885,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 1140344980}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.6
   Mass: 3
 --- !u!54 &1140344980
@@ -13180,7 +13277,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 1192859920}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.1
   Mass: 4
 --- !u!54 &1192859920
@@ -14719,7 +14816,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 1383605170}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 12
   Mass: 4
   UEvent:
@@ -15029,7 +15126,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 1408340484}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.6
   Mass: 0.1
 --- !u!54 &1408340484
@@ -16701,7 +16798,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 1630119654}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.2
   Mass: 0.001
 --- !u!54 &1630119654
@@ -16981,7 +17078,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 1665342110}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.4
   Mass: 0.1
 --- !u!1001 &1665869176
@@ -17088,7 +17185,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 1665869181}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.1
   Mass: 2
 --- !u!54 &1665869181
@@ -17154,7 +17251,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 1665869181}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 1.2
   Mass: 0.4
 --- !u!65 &1665869186
@@ -17309,7 +17406,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 1689521489}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.1
   Mass: 2
 --- !u!54 &1689521489
@@ -17610,7 +17707,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 1703507385}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.1
   Mass: 2
 --- !u!54 &1703507385
@@ -17854,7 +17951,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 1712370759}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.1
   Mass: 2
 --- !u!54 &1712370759
@@ -18322,7 +18419,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 1727565150}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.8
   Mass: 0.3
 --- !u!54 &1727565150
@@ -19091,7 +19188,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 1802948066}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 1.4
   Mass: 3
 --- !u!54 &1802948066
@@ -20099,7 +20196,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 1917429876}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.6
   Mass: 1.3
 --- !u!54 &1917429876
@@ -20544,7 +20641,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 1963896099}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 0.2
   Mass: 0.001
 --- !u!54 &1963896099
@@ -20837,7 +20934,7 @@ MonoBehaviour:
   Player: {fileID: 7867424415800622200}
   Table: {fileID: 780870908}
   RigidBody: {fileID: 1977077385}
-  Goblin: {fileID: 0}
+  Goblin: {fileID: 1413855624}
   ObjectValue: 1.7
   Mass: 4
 --- !u!54 &1977077385
@@ -23491,6 +23588,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7867424415800622201}
     - target: {fileID: 2702821805690059790, guid: 5232ad317ec90f2449d515a9dcdbfb63, type: 3}
+      propertyPath: NegativeHit
+      value: 
+      objectReference: {fileID: 7867424415800622206}
+    - target: {fileID: 2702821805690059790, guid: 5232ad317ec90f2449d515a9dcdbfb63, type: 3}
+      propertyPath: PositiveHit
+      value: 
+      objectReference: {fileID: 7867424415800622207}
+    - target: {fileID: 2702821805690059790, guid: 5232ad317ec90f2449d515a9dcdbfb63, type: 3}
       propertyPath: RotateSpeed
       value: 60
       objectReference: {fileID: 0}
@@ -23584,6 +23689,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2538129569246992559, guid: 5232ad317ec90f2449d515a9dcdbfb63, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7867424415800622202}
+    - targetCorrespondingSourceObject: {fileID: 2538129569246992559, guid: 5232ad317ec90f2449d515a9dcdbfb63, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7867424415800622207}
+    - targetCorrespondingSourceObject: {fileID: 2538129569246992559, guid: 5232ad317ec90f2449d515a9dcdbfb63, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7867424415800622206}
   m_SourcePrefab: {fileID: 100100000, guid: 5232ad317ec90f2449d515a9dcdbfb63, type: 3}
 --- !u!1001 &7380175449939209419
 PrefabInstance:
@@ -23757,6 +23868,198 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.7694219, z: 1.2278476}
   m_Center: {x: 4.60999e-11, y: 0.39471373, z: 0.02262408}
+--- !u!82 &7867424415800622206
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832739599840154702}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 17d9d4130c1296a439108821ed1b2913, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &7867424415800622207
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832739599840154702}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d95ec475d54be2c46ae9ab3185b16fe7, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

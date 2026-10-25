@@ -5,3 +5,8 @@
 5. "Stylized Fruit Lowpoly Free Pack #8" (https://skfb.ly/6ZYAB) by ferofluid is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 6. "Fish on the Table Set (Free)" (https://skfb.ly/prnIB) by Juliette(PurpleFox) is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 7. "Set of comic speech bubbles" Designed by Magnific (www.magnific.com) under their free license.
+8. "Retro-Game" Music by Dmitrii Kolesnikov from Pixabay under their free license.
+9. "Set of Comic Speech Bubbles" by Winkimages from Magnific under their free license.
+10. "Manga Temple" "Komika" Font by Blambot from Dafont.com under a free personal use license.
+11. "RPG Sword Attack Combo 39" Sound Effect by Game Studio from Pixabay
+12. "Impact + Metal Bullet Hit Clang" Sound Effect by Vadim from Pixabay
