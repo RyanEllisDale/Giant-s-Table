@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Unity.VisualScripting;
 
 // https://discussions.unity.com/t/how-do-i-detect-when-the-player-just-landed-after-jumping/855755
 // https://discussions.unity.com/t/how-to-make-player-detect-when-on-ground-and-when-lands-on-ground/196439/3
@@ -23,11 +24,11 @@ public class Player_CS : MonoBehaviour
     [SerializeField] private float RotateSpeed = 35.0f;
     private float CurrentRotateSpeed = 35.0f;
     [SerializeField] private float HeightThresholdLimit = 0.5f;
-    [SerializeField] private float MaxSpeed = 10000.0f;
+    [SerializeField] public float MaxSpeed = 10000.0f;
     [SerializeField] private float BuildingSpeedBaseIncriment = 100.0f;
     [SerializeField] private float BuildingSpeedExponentialAcceleration = 0.10f;
     private float BuildSpeedIncriment = 1.0f;
-    private float BuiltSpeed = 0.0f;
+    public float BuiltSpeed = 0.0f;
     [SerializeField] private float BuiltSpeedThreshold = 20.0f;
 
     private float AirTime = 0.0f;
@@ -36,6 +37,10 @@ public class Player_CS : MonoBehaviour
     [SerializeField] private LayerMask FloorLayers;
     [SerializeField] private float SizeGain = 0.4f;
     [SerializeField] private float MassGain = 2.0f;
+
+    [UnitHeaderInspectable("UI")]
+    [SerializeField] private List<GameObject> UIBubblesPositive;
+    [SerializeField] private List<GameObject> UIBubblesNegative;
 
 
     private void Awake()
@@ -98,6 +103,34 @@ public class Player_CS : MonoBehaviour
             }
             AirTime = 0.0f;
         }
+        else if (collision.gameObject.CompareTag("Knockable") == true)
+        {
+            float goodVelocity = 1.8f;
+            float PlayerVelocity = PlayerBody.velocity.x + PlayerBody.velocity.y + PlayerBody.velocity.z;
+
+            if (PlayerVelocity < goodVelocity)
+            {
+                StartCoroutine(UIBubble(UIBubblesNegative[UnityEngine.Random.Range(0, 3)]));
+            }
+            else if (PlayerVelocity > goodVelocity)
+            {
+                StartCoroutine(UIBubble(UIBubblesPositive[UnityEngine.Random.Range(0, 3)]));
+            }
+        }
+    }
+
+    private IEnumerator UIBubble(GameObject Bubble)
+    {
+        Bubble.SetActive(true);
+
+        yield return new WaitForSeconds(0.5f);
+
+        Bubble.SetActive(false);
+    }
+
+    public void WinEvent()
+    {
+        Debug.Log("Win");
     }
 
     public void Grow(float ObjectValue)
@@ -107,4 +140,5 @@ public class Player_CS : MonoBehaviour
         PlayerBody.mass = PlayerBody.mass + (MassGain * ObjectValue);
     }
 
+    
 }

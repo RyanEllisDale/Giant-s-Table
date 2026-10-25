@@ -7,22 +7,30 @@ using UnityEngine;
 public class Knockable_CS : MonoBehaviour
 {
     [Header("References : ")]
-    [SerializeField] private Player_CS Player;
-    [SerializeField] private GameObject Table;
+    [SerializeField] protected Player_CS Player;
+    [SerializeField] protected GameObject Table;
+    [SerializeField] protected Rigidbody RigidBody;
 
-    [Header("Knockable :")]
-    [SerializeField] private float ObjectValue = 1.0f;
+    [Header("Knockable : ")]
+    [SerializeField] protected float ObjectValue = 1.0f;
+    [SerializeField] protected float Mass = 1.0f;
 
-    private void OnValidate()
+    protected void OnValidate()
     {
         Player = FindAnyObjectByType<Player_CS>();
         Table = GameObject.Find("Table");
+
+        RigidBody = gameObject.GetComponent<Rigidbody>();
+        RigidBody.mass = Mass;
     }
 
-    private void Awake()
+    protected void Awake()
     {
         Player = FindAnyObjectByType<Player_CS>();
         Table = GameObject.Find("Table");
+
+        RigidBody = gameObject.GetComponent<Rigidbody>();
+        RigidBody.mass = Mass;
     }
 
     // Death : 
