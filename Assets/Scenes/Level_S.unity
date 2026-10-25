@@ -23659,6 +23659,10 @@ PrefabInstance:
       propertyPath: UIBubblesPositive.Array.data[2]
       value: 
       objectReference: {fileID: 2061136422}
+    - target: {fileID: 2702821805690059790, guid: 5232ad317ec90f2449d515a9dcdbfb63, type: 3}
+      propertyPath: BuildingSpeedExponentialAcceleration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 9085643814299638465, guid: 5232ad317ec90f2449d515a9dcdbfb63, type: 3}
       propertyPath: CameraTarget
       value: 
