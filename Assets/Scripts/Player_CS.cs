@@ -17,6 +17,8 @@ public class Player_CS : MonoBehaviour
     [SerializeField] private Transform PlayerTransform;
     [SerializeField] private Rigidbody PlayerBody;
     [SerializeField] private Camera CameraTarget;
+    private Vector3 defaultPosition;
+    private Quaternion defaultRotation;
 
     [Header("Movement :")]
     [SerializeField] private float ForwardMoveSpeed = 1.0f;
@@ -46,6 +48,12 @@ public class Player_CS : MonoBehaviour
     private void Awake()
     {
         CurrentRotateSpeed = RotateSpeed;
+    }
+
+    private void Start()
+    {
+        defaultPosition = PlayerTransform.position;
+        defaultRotation = PlayerTransform.rotation;
     }
 
 
@@ -95,13 +103,9 @@ public class Player_CS : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         // Landing : 
-        if (collision.gameObject.CompareTag("Floor") == true)
+        if (collision.gameObject.CompareTag("Death") == true)
         {
-            if (AirTime > HeightThresholdLimit)
-            {
-                Debug.Log("Dead");
-            }
-            AirTime = 0.0f;
+           StartCoroutine(ResetPlayer());
         }
         else if (collision.gameObject.CompareTag("Knockable") == true)
         {
@@ -117,6 +121,14 @@ public class Player_CS : MonoBehaviour
                 StartCoroutine(UIBubble(UIBubblesPositive[UnityEngine.Random.Range(0, 3)]));
             }
         }
+    }
+
+    private IEnumerator ResetPlayer()
+    {
+        yield return new WaitForSeconds(0.75f);
+
+        PlayerTransform.position = defaultPosition;
+        PlayerTransform.rotation = defaultRotation;
     }
 
     private IEnumerator UIBubble(GameObject Bubble)
