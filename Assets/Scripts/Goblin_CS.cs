@@ -13,13 +13,14 @@ public class Goblin_CS : MonoBehaviour
         {
             index = Random.Range(0, Dialogues.Count);
             Dialogues[index].SetActive(true);
-            StartCoroutine(DialogueTimer());
+            Dialogues[index].GetComponent<AudioSource>().Play();
+            StartCoroutine(DialogueTimer(Dialogues[index].GetComponent<AudioSource>().clip.length));
         }
     }
 
-    private IEnumerator DialogueTimer()
+    private IEnumerator DialogueTimer(float time)
     {
-        yield return new WaitForSeconds(0.9f);
+        yield return new WaitForSeconds(time);
         Dialogues[index].SetActive(false);
 
         index = -99;
