@@ -1,13 +1,17 @@
 // Includes : 
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Fish_CS : Knockable_CS
 {
     // Member Data : 
     public UnityEvent UEvent;
+    [SerializeField] private TextMeshProUGUI Text;
+    [SerializeField] private GameObject Bubble;
 
     private void Start()
     {
@@ -23,7 +27,16 @@ public class Fish_CS : Knockable_CS
         if (collision.gameObject.CompareTag("Floor") == true && collision.gameObject != Table)
         {
             UEvent.Invoke();
-            Destroy(gameObject);
+            Bubble.SetActive(true);
+            Text.alpha = 255.0f;
+            StartCoroutine(ReturnStart());
         }
+    }
+
+    IEnumerator ReturnStart()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        SceneManager.LoadScene("StartGame_S");
     }
 }
