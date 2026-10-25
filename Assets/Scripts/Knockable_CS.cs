@@ -10,6 +10,7 @@ public class Knockable_CS : MonoBehaviour
     [SerializeField] protected Player_CS Player;
     [SerializeField] protected GameObject Table;
     [SerializeField] protected Rigidbody RigidBody;
+    [SerializeField] protected Goblin_CS Goblin;
 
     [Header("Knockable : ")]
     [SerializeField] protected float ObjectValue = 1.0f;
@@ -18,6 +19,7 @@ public class Knockable_CS : MonoBehaviour
     protected void OnValidate()
     {
         Player = FindAnyObjectByType<Player_CS>();
+        Goblin = FindAnyObjectByType<Goblin_CS>();
         Table = GameObject.Find("Table");
 
         RigidBody = gameObject.GetComponent<Rigidbody>();
@@ -27,6 +29,7 @@ public class Knockable_CS : MonoBehaviour
     protected void Awake()
     {
         Player = FindAnyObjectByType<Player_CS>();
+        Goblin = FindAnyObjectByType<Goblin_CS>();
         Table = GameObject.Find("Table");
 
         RigidBody = gameObject.GetComponent<Rigidbody>();
@@ -36,9 +39,10 @@ public class Knockable_CS : MonoBehaviour
     // Death : 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Floor") == true && collision.gameObject != Table)
+        if (collision.gameObject.CompareTag("Death") == true && collision.gameObject != Table)
         {
             Player.Grow(ObjectValue);
+            Goblin.CallDialogue();
             Destroy(gameObject);
         }
     }

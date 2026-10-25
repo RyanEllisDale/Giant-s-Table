@@ -24,7 +24,7 @@ public class Fish_CS : Knockable_CS
     // Death :
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Floor") == true && collision.gameObject != Table)
+        if (collision.gameObject.CompareTag("Death") == true && collision.gameObject != Table)
         {
             UEvent.Invoke();
             Bubble.SetActive(true);

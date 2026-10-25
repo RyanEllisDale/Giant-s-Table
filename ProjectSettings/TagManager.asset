@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - Knockable
+  - Death
   layers:
   - Default
   - TransparentFX
